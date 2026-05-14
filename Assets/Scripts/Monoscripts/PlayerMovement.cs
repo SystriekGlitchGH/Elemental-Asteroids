@@ -11,9 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed;
     public float friction;
     private float directionX, directionY;
-    private void Update(){
-        
-    }
     private void FixedUpdate()
     {
         // adding acceleration to the directions
