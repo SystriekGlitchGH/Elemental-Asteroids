@@ -7,6 +7,14 @@ public class GravitySource : MonoBehaviour
 
     public float AtmosphericDrag;
     [SerializeField] int mass;
+    public void Update()
+    {
+        if (pm != null)
+        {
+            Vector2 direction = (transform.position - pm.transform.position).normalized;
+            pm.transform.up = -direction;
+        }
+    }
     public void FixedUpdate()
     {
         if (pm != null)

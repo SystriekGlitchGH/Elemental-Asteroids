@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    BindingMode: 2
+    PositionDamping: {x: 0.5, y: 0.5, z: 0.5}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pm: {fileID: 1436418848}
   AtmosphericDrag: 0
-  mass: 100
+  mass: 200
 --- !u!1 &1098802816
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,8 +657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1436418851}
-  acceleration: 100
-  topMovementSpeed: 12
+  acceleration: 70
+  topMovementSpeed: 9
   maxSpeed: 30
   friction: 0
 --- !u!114 &1436418849
