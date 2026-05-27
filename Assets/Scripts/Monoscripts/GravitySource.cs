@@ -12,8 +12,9 @@ public class GravitySource : MonoBehaviour
         if (pm != null)
         {
             Vector2 direction = (transform.position - pm.transform.position).normalized;
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            pm.transform.rotation = targetRotation;
+            float rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            pm.transform.rotation = Quaternion.Lerp(pm.transform.position)
+            //pm.transform.rotation = Quaternion.Euler(0,0,rotation + 90);
         }
     }
     public void FixedUpdate()
