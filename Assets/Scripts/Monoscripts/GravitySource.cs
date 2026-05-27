@@ -12,7 +12,8 @@ public class GravitySource : MonoBehaviour
         if (pm != null)
         {
             Vector2 direction = (transform.position - pm.transform.position).normalized;
-            pm.transform.up = -direction;
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            pm.transform.rotation = targetRotation;
         }
     }
     public void FixedUpdate()
